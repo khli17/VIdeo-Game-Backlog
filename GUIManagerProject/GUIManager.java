@@ -13,7 +13,7 @@ public class GUIManager {
         // FRAME CONTAINS EVERYTHING
         frame = new JFrame("Video Game Backlog Organizer");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(1280, 720);
+        frame.setSize(1000, 720);
         frame.setResizable(false);
 
 

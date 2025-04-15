@@ -11,10 +11,20 @@ public class ViewBacklogMenu extends JPanel{
     setLayout(new GridBagLayout());
     GridBagConstraints c = new GridBagConstraints();
 
+        c.insets = new Insets(10,10,10,10);
+        c.gridx = 0;
+
         setBackground(Color.yellow);
 
-        JButton viewReturn = new JButton("GO BACK TO MAIN");
-        JLabel viewLabel = new JLabel("LOOK");
+        JButton viewReturn = new JButton("Return to Menu");
+        
+        JLabel viewLabel = new JLabel("Backlog");
+        
+        viewLabel.setFont(new Font("Arial", Font.BOLD, 50));
+
+        viewReturn.setPreferredSize(new Dimension(300,100));
+        viewReturn.setFont(new Font("Arial", Font.PLAIN, 20));
+     
         c.gridy = 0;
         add(viewLabel, c);
         c.gridy = 1;

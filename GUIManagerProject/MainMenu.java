@@ -7,11 +7,15 @@ public class MainMenu extends JPanel {
     public MainMenu(GUIManager manager){
 
         setLayout(new GridBagLayout());
-        setBackground(Color.red);
+        setBackground(Color.green);
         
-        JButton button = new JButton("ADDDDDD");
-        JButton viewButton = new JButton("VIEWWWWWWW");
-        JLabel label = new JLabel("BACKLOG");
+        JButton addButton = new JButton("Add Video Game");
+        JButton viewButton = new JButton("View Backlog");
+        addButton.setPreferredSize(new Dimension(300,100));
+        viewButton.setPreferredSize(new Dimension(300,100));
+        addButton.setFont(new Font("Arial", Font.PLAIN, 20));
+        viewButton.setFont(new Font("Arial", Font.PLAIN, 20));
+        JLabel title = new JLabel("Video Game Backlog");
 
         GridBagConstraints c = new GridBagConstraints();
         c.insets = new Insets(10,10,10,10);
@@ -19,16 +23,16 @@ public class MainMenu extends JPanel {
 
         //formatting the main menu
         c.gridy = 0;
-        add(label, c);
+        add(title, c);
         c.gridy = 1;
-        add(button, c);
+        add(addButton, c);
         c.gridy = 2;
         add(viewButton, c);
 
-        label.setFont(new Font("Arial", Font.PLAIN, 50));
+        title.setFont(new Font("Arial", Font.BOLD, 50));
 
         // main menu --> add
-        button.addActionListener(e -> manager.switchMenu("PANEL2"));
+        addButton.addActionListener(e -> manager.switchMenu("PANEL2"));
 
         viewButton.addActionListener(e -> manager.switchMenu("VIEW"));
         
