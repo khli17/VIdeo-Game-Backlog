@@ -101,6 +101,7 @@ public class ViewBacklogMenu extends JPanel {
                     JComboBox<String> statusBox = new JComboBox<>(statusOptions);
                     statusBox.setSelectedItem(status);
 
+                    //panel pop up that allows user to edit information of game that they select
                     JPanel editPanel = new JPanel(new GridLayout(0, 1));
                     editPanel.add(new JLabel("Game Name:"));
                     editPanel.add(nameField);
@@ -133,6 +134,7 @@ public class ViewBacklogMenu extends JPanel {
                     }
                 });
 
+                //add and format buttons
                 buttonPanel.add(editButton);
                 buttonPanel.add(Box.createVerticalStrut(10));
                 buttonPanel.add(deleteButton);

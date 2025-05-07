@@ -76,7 +76,7 @@ public class AddGameLogMenu extends JPanel{
                 statusBox.setSelectedIndex(0);
 
                  } catch (IOException ioEx) {
-            ioEx.printStackTrace(); // Show in console for now
+            ioEx.printStackTrace(); // for any posssible errors when adding games
             JOptionPane.showMessageDialog(null, "Error saving log to file.", "File Error", JOptionPane.ERROR_MESSAGE);
         } catch (NumberFormatException numEx) {
             JOptionPane.showMessageDialog(null, "Please fill each field.", "Input Error", JOptionPane.WARNING_MESSAGE);
@@ -85,7 +85,7 @@ public class AddGameLogMenu extends JPanel{
         });
 
 
-
+        //attempt at formatting 
         c.gridy = 0;
         add(addLabelTitle, c);
         c.gridy = 1;
