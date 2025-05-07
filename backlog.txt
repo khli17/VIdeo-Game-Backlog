@@ -6,3 +6,4 @@ Atelier Sophie,60.0,Not Played Yet
 Dragon Quest,50.0,Not Played Yet
 Super Mario Galaxy,15.0,Completed
 Super Mario Bros. Wonder,10.0,Not Played Yet
+Among Us (final test),5,Not Played Yet
