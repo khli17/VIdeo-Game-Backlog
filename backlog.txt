@@ -1,0 +1,8 @@
+Trails Through Daybreak,65.0,Currently Playing
+Clair Obscur: Expedition 33,35.0,Not Played Yet
+Pokemon Legends: ZA,60.0,Not Played Yet
+Persona 5 Royal,100.0,Not Played Yet
+Atelier Sophie,60.0,Not Played Yet
+Dragon Quest,50.0,Not Played Yet
+Super Mario Galaxy,15.0,Completed
+Super Mario Bros. Wonder,10.0,Not Played Yet

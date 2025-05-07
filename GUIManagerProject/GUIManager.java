@@ -1,5 +1,4 @@
 import java.awt.*;
-import java.awt.event.*;
 import javax.swing.*;
 
 public class GUIManager {
@@ -18,16 +17,16 @@ public class GUIManager {
 
 
         //adding the menus
-        MainMenu panel = new MainMenu(this);
-        AddGameLogMenu panel2 = new AddGameLogMenu(this);
+        MainMenu mainPanel = new MainMenu(this);
+        AddGameLogMenu addPanel = new AddGameLogMenu(this);
         ViewBacklogMenu viewPanel = new ViewBacklogMenu(this);
 
-        // CardLayout Container
+        //layout for variables fields etc
         cardLayout = new CardLayout();
         cards = new JPanel(cardLayout);
-        cards.add(panel, "PANEL1");   
-        cards.add(panel2, "PANEL2");  
-        cards.add(viewPanel, "VIEW"); 
+        cards.add(mainPanel, "MainMenu");   
+        cards.add(addPanel, "AddGame");  
+        cards.add(viewPanel, "ViewBacklog"); 
 
         // Add cards to frame
         frame.getContentPane().add(cards, BorderLayout.CENTER);
@@ -37,8 +36,24 @@ public class GUIManager {
     }
 
     public void switchMenu(String toMenu){
+        if (toMenu.equals("ViewBacklog")) {
+            // Remove the old panel if it exists and adds new one
+            cards.remove(2); 
+            ViewBacklogMenu newViewPanel = new ViewBacklogMenu(this);
+            cards.add(newViewPanel, "ViewBacklog");
+        }
         cardLayout.show(cards, toMenu);
     }
+    //makes it so view backlog actually updates without having to exit whole program
+    public void refreshView(){
+        cards.remove(2); 
+        ViewBacklogMenu refresh = new ViewBacklogMenu(this);
+        cards.add(refresh, "ViewBacklog");
+        cardLayout.show(cards, "ViewBacklog");
+        cards.revalidate();
+        cards.repaint();
+    }
+
 
     public static void main(String[] args) {
         new GUIManager();

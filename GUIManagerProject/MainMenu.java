@@ -1,6 +1,5 @@
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.*;
 
 public class MainMenu extends JPanel {
     
@@ -31,10 +30,10 @@ public class MainMenu extends JPanel {
 
         title.setFont(new Font("Arial", Font.BOLD, 50));
 
-        // main menu --> add
-        addButton.addActionListener(e -> manager.switchMenu("PANEL2"));
+        //buttons for adding backlog/view backlog
+        addButton.addActionListener(e -> manager.switchMenu("AddGame"));
 
-        viewButton.addActionListener(e -> manager.switchMenu("VIEW"));
+        viewButton.addActionListener(e -> manager.switchMenu("ViewBacklog"));
         
     }
 }
